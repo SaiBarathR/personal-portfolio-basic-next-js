@@ -17,7 +17,7 @@ export default function Description() {
                 <Grid item component={"h2"} className="text-black text-4xl 2xl:text-6xl font-normal md:text-5xl">
                     Mastering the Front-End
                 </Grid>
-                {description.map((paragraph, index) => <Grid item key={index + paragraph} className="text-white"><p className={space_grotesk.className}>{paragraph}</p></Grid>)}
+                {description.map((paragraph, index) => <Grid item key={index + paragraph} className="text-white lg:max-w-[60%] font-bold text-xl"><p className={space_grotesk.className}>{paragraph}</p></Grid>)}
             </Grid>
         </div>
     )
