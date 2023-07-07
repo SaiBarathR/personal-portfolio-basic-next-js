@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #da7422;
+  background-color: #da7422;  
 }
 
 ::-webkit-scrollbar-track {
@@ -40,4 +40,12 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: rgb(190, 190, 190);
   border-radius: 5px;
+}
+
+.intro-background-color {
+  background: linear-gradient(45deg, #ED6A5A 0%, #9BC1BC 100%);
+}
+
+.linkedin-background-img{
+  background-image: url('../icons/pattern.png');
 }
