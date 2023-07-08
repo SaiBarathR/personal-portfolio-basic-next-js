@@ -1,10 +1,8 @@
 'use client'
 
-import { Tooltip } from "@mui/material"
 import Image from "next/image"
 import CssImage from "../../icons/cssmagic.png"
 import Github from "../../icons/github.jpeg"
-
 
 export default function FillerContent() {
 
@@ -22,14 +20,10 @@ export default function FillerContent() {
 function ImageDescriptionsRenderer({ src, header, description, link }) {
 
     return (
-
-        <Tooltip title={link}>
             <div onClick={() => window.open(link, '_blank', 'noreferrer')} className="flex md:w-[48%] flex-col gap-5  text-center items-center hover:scale-110 cursor-pointer transition ease-linear delay-50 hover:translate-y-7">
                 <Image src={src} alt="link" className="hover:mb-1 hover:animate-wiggle w-full max-h-[384px] max-w-[384px] md:max-w-[304px] lg:max-w-[384px]  bg-white rounded-[80px]" />
                 <h3 className="font-normal text-3xl animate-none :hover animate-pulse text-white  ">{header}</h3>
                 <p className="text-[#f4f1bb] :hover animate-pulse font-normal text-base max-w-sm">{description}</p>
             </div>
-        </Tooltip>
-
     )
 }
