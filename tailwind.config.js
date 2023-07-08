@@ -13,10 +13,10 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        'spin-slow': 'spin 3s linear',
+        'spin-slow': 'spin 3s linear infinite',
         'spin-fast': 'spin 1s linear',
         wiggle: 'wiggle 1s ease-in-out infinite',
-        text: 'text 5s ease infinite',
+        text: 'text 2s ease infinite',
       },
       keyframes: {
         wiggle: {
