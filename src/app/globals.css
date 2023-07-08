@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #da7422;  
+  background-color: #da7422;
 }
 
 ::-webkit-scrollbar-track {
@@ -46,6 +46,12 @@ body {
   background: linear-gradient(45deg, #ED6A5A 0%, #9BC1BC 100%);
 }
 
-.linkedin-background-img{
+.linkedin-background-img {
   background-image: url('../icons/pattern.png');
+}
+
+.honors-background-img {
+  background-image: url('../icons/scribbles.png');
+  background-repeat: no-repeat !important;
+  background-position: center;
 }
