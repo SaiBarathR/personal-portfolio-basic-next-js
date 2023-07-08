@@ -1,5 +1,3 @@
-'use client'
-
 import { space_grotesk } from "@/font";
 import { useMemo } from "react"
 
