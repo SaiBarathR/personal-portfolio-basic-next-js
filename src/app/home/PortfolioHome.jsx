@@ -11,9 +11,9 @@ export default function PortfolioHome() {
     return (
         <>
             <Intro />
-            <LinkedInShowcase />
-            <Description />
             <FillerContent />
+            <Description />
+            <LinkedInShowcase />
             <Honors />
             <Hobbies />
             <Footer />
