@@ -23,8 +23,8 @@ function ImageDescriptionsRenderer({ src, header, description, link }) {
 
     return (
         <Tooltip title={link}>
-            <Grid onClick={() => window.open(link, '_blank', 'noreferrer')} item className="flex md:w-[48%] flex-col gap-5 text-center items-center hover:scale-110 cursor-pointer transition ease-linear delay-50 hover:translate-y-7">
-                <Image src={src} alt="link" className="w-full max-h-[384px] max-w-[384px] md:max-w-[304px] lg:max-w-[384px]  bg-white rounded-[80px]" />
+            <Grid onClick={() => window.open(link, '_blank', 'noreferrer')} item className="flex md:w-[48%] flex-col gap-5  text-center items-center hover:scale-110 cursor-pointer transition ease-linear delay-50 hover:translate-y-7">
+                <Image src={src} alt="link" className="hover:mb-1 hover:animate-wiggle w-full max-h-[384px] max-w-[384px] md:max-w-[304px] lg:max-w-[384px]  bg-white rounded-[80px]" />
                 <h3 className="font-normal text-3xl :hover animate-pulse text-white  ">{header}</h3>
                 <p className="text-[#f4f1bb] :hover animate-pulse font-normal text-base max-w-sm">{description}</p>
             </Grid>
