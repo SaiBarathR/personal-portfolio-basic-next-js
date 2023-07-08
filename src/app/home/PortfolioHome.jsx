@@ -4,6 +4,8 @@ import LinkedInShowcase from "./LinkedInShowCase";
 import Description from "./Description";
 import FillerContent from "./FillerContent";
 import Honors from "./Honors";
+import { Hobbies } from "./Hobbies";
+import Footer from "./Footer";
 
 export default function PortfolioHome() {
     return (
@@ -12,7 +14,9 @@ export default function PortfolioHome() {
             <LinkedInShowcase />
             <Description />
             <FillerContent />
-            <Honors/>
+            <Honors />
+            <Hobbies />
+            <Footer />
         </>
     )
 }
