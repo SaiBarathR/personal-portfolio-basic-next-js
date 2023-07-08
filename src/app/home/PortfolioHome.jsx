@@ -10,7 +10,7 @@ export default function PortfolioHome() {
             <Intro />
             <LinkedInShowcase />
             <Description />
-            <FillerContent/>
+            <FillerContent />
         </>
     )
 }

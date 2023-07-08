@@ -1,7 +1,6 @@
 'use client'
 
 import { space_grotesk } from "@/font";
-import { Grid } from "@mui/material"
 import { useMemo } from "react"
 
 export default function Description() {
@@ -13,12 +12,12 @@ export default function Description() {
 
     return (
         <div className="w-full min-h-[400px] flex flex-col  items-center bg-[#da7422]">
-            <Grid container className="max-w-[1440px]  p-12 gap-9">
-                <Grid item component={"h2"} className="text-black text-4xl 2xl:text-6xl font-normal md:text-5xl">
+            <div className="max-w-[1440px]  p-12 flex flex-col gap-7 text-center items-start">
+                <div component={"h2"} className="text-black text-4xl 2xl:text-6xl font-normal md:text-5xl">
                     Mastering the Front-End
-                </Grid>
-                {description.map((paragraph, index) => <Grid item key={index + paragraph} className="text-white lg:max-w-[60%] font-bold text-xl"><p className={space_grotesk.className}>{paragraph}</p></Grid>)}
-            </Grid>
+                </div>
+                {description.map((paragraph, index) => <p key={index + paragraph} className={"text-white w-full text-start lg:max-w-[60%] font-bold text-xl " + space_grotesk.className}>{paragraph}</p>)}
+            </div>
         </div>
     )
 }
