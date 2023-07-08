@@ -3,6 +3,7 @@ import Image from "next/image";
 import LinkedInShowcase from "./LinkedInShowCase";
 import Description from "./Description";
 import FillerContent from "./FillerContent";
+import Honors from "./Honors";
 
 export default function PortfolioHome() {
     return (
@@ -11,6 +12,7 @@ export default function PortfolioHome() {
             <LinkedInShowcase />
             <Description />
             <FillerContent />
+            <Honors/>
         </>
     )
 }
