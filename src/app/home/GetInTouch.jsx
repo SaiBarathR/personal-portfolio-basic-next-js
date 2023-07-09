@@ -48,7 +48,7 @@ export default function GetInTouchDrawer({ toggleDrawer }) {
                 </div>
                 <div className="flex w-full flex-col gap-5 md:gap-8 pr-3 mt-1 mb-2 md:mb-5">
                     <ImageRenderer src={Linkedinsvg} name={"@saibarathr"} link={'https://www.linkedin.com/in/saibarath-r'} />
-                    <ImageRenderer src={Gmail} name={"Saibarathr@gmail.com"} link={'mailto:saibarathr@example.com'} />
+                    <ImageRenderer src={Gmail} name={"Saibarathr@gmail.com"} link={'mailto:saibarathr@gmail.com'} />
                     <ImageRenderer src={Whatsapp} name={"@Sai Barath R"} link={' https://wa.me/919843621231 '} />
                     <ImageRenderer src={Twitter} name={"@saibarathr"} link={'https://twitter.com/saibarathr'} />
                 </div>
