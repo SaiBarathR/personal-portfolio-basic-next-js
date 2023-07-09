@@ -5,14 +5,20 @@ import { space_grotesk } from "@/font";
 import { useState } from "react";
 import SwipeableEdgeDrawer from "../Components/CustomDrawer";
 import GetInTouchDrawer from "./GetInTouch";
+import Projects from "./Projects";
 
 
 export default function Intro() {
     const [open, setOpen] = useState(false);
+    const [openProjects, setOpenProjects] = useState(false);
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen);
     };
+
+    const toggleProjectsDrawer = (newOpen) => () => {
+        setOpenProjects(newOpen);
+    }
 
     return (
         <>
@@ -27,7 +33,7 @@ export default function Intro() {
                         Unleashing<br />React<br />Superpowers!
                     </p>
                     <div className="gap-7 flex flex-col md:flex-row">
-                        <button variant="contained" className={"bg-black p-2  rounded-none normal-case text-[#FFFBDB] text-base font-bold hover:scale-125 transition ease-in-out delay-75 " + space_grotesk.className}>
+                        <button onClick={() => setOpenProjects((prev) => !prev)} variant="contained" className={"bg-black p-2  rounded-none normal-case text-[#FFFBDB] text-base font-bold hover:scale-125 transition ease-in-out delay-75 " + space_grotesk.className}>
                             Explore Projects
                         </button>
                         <button onClick={() => setOpen((prev) => !prev)} variant="contained" className={"bg-[#FFFBDB] p-2 rounded-none normal-case text-[#30362F] text-base font-bold hover:scale-125 transition ease-in-out delay-75 " + space_grotesk.className}>
@@ -36,8 +42,11 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-            <SwipeableEdgeDrawer open={open} toggleDrawer={toggleDrawer} position={"right"}>
+            <SwipeableEdgeDrawer open={open} toggleDrawer={toggleDrawer} position={"right"} width="auto">
                 <GetInTouchDrawer toggleDrawer={toggleDrawer} />
+            </SwipeableEdgeDrawer>
+            <SwipeableEdgeDrawer open={openProjects} toggleDrawer={toggleProjectsDrawer} position={"left"} width={"50%"}>
+               <Projects toggleDrawer={toggleProjectsDrawer} />
             </SwipeableEdgeDrawer>
         </>
     )

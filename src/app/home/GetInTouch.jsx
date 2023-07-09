@@ -1,4 +1,5 @@
 'use client'
+
 import Image from "next/image";
 import { space_grotesk } from "@/font";
 import Twitter from '../../icons/twitter.svg'
@@ -6,7 +7,6 @@ import Gmail from '../../icons/gmail.svg'
 import Linkedinsvg from '../../icons/linkedin.svg'
 import Whatsapp from '../../icons/whatsapp.svg'
 import ProfileEmoji from '../../icons/profilepic.png'
-
 
 export default function GetInTouchDrawer({ toggleDrawer }) {
 
