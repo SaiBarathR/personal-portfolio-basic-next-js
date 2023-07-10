@@ -4,8 +4,8 @@ import { useMemo } from "react"
 export default function Description() {
     const description = useMemo(() => [
         'Welcome to the digital playground of a front-end expert React developer. Follow the journey of a seasoned coder, conquering challenges and transforming visions into reality.',
-        'With a strong command over React, JavaScript, and other modern web technologies, this developer delivers exceptional user experiences, ensuring projects run smoothly, and websites come to life.',
-        `From working with startups to Fortune 500 companies, they've honed their skills, driving innovative solutions and pushing the boundaries of what's possible in the digital realm.`,
+        `With a strong command over React, Next.js, JavaScript, Typescript, SaaS, WebAPI's, Webpack and other modern web technologies along with strong knowledge in Node.js, MySQL, PostgreSQL, RestAPI's, Spring Boot. I have delivered exceptional user experiences, ensuring projects run smoothly, and websites come to life.`,
+        `From working with startups to Fortune 500 companies, I've honed my skills, driving innovative solutions and pushing the boundaries of what's possible in the digital realm.`,
     ], []);
 
     return (

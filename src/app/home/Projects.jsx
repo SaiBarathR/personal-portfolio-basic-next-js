@@ -74,7 +74,7 @@ function ProjectList({ repositoryDetails, header }) {
             <h1 className="font-normal text-2xl">{header}</h1>
             <Image className={`cursor-pointer min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-[#F6F7F9] hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`} onClick={() => setOpenPersonalPRojects((prev) => !prev)} src={DropDown} alt={"arrow"} />
         </div>
-        <div className=" w-full items-center justify-center flex flex-col gap-4 mb-4 ">
+        <div className=" w-full items-center justify-center flex flex-col gap-6 mb-4 ">
             {openPersonalPRojects && repositoryDetails.map((repo, index) => (
                 <div
                     key={repo.id}
