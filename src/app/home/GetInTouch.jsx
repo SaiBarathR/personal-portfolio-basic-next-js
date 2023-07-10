@@ -7,6 +7,7 @@ import Gmail from '../../icons/gmail.svg'
 import Linkedinsvg from '../../icons/linkedin.svg'
 import Whatsapp from '../../icons/whatsapp.svg'
 import ProfileEmoji from '../../icons/profilepic.png'
+import Github from '../../icons/github.svg'
 
 export default function GetInTouchDrawer({ toggleDrawer }) {
 
@@ -26,17 +27,17 @@ export default function GetInTouchDrawer({ toggleDrawer }) {
     }
 
     function ImageRenderer({ src, link, name }) {
-        return <div className="flex hover:bg-slate-200 flex-col md:flex-row gap-5  items-center cursor-pointer hover:scale-105 transition ease-in-out delay-75 hover:-translate-y-1 shadow-md p-2 rounded-lg"
+        return <div className="flex hover:bg-slate-200  md:m-0 m-2 flex-col md:flex-row gap-5  items-center cursor-pointer hover:scale-105 transition ease-in-out delay-75 hover:-translate-y-1 shadow-md p-2 rounded-lg"
             onClick={() => onClickContact(link, name)}
         >
             <Image src={src} alt={name} />
-            <p className="text-lg md:text-xl font-medium">{name}</p>
+            <p className="text-lg md:text-xl font-medium break-all">{name}</p>
         </div >
     }
 
     return <div className={" w-full md:w-auto bg-white  min-h-[200px] flex flex-row  h-full " + space_grotesk.className}>
         <div className="w-[6px] h-[30px] bg-slate-400 rounded-lg flex self-center items-center m-2 cursor-pointer " onMouseDown={toggleDrawer(false)}></div>
-        <div className="w-full flex flex-col m-6 mr-8 md:m-10 md:mr-12 gap-9 items-center ">
+        <div className="w-full flex flex-col m-2 mr-4 md:m-10 md:mr-12 gap-9 items-center ">
             <h1 className="font-semibold text-3xl ">Contact - Info</h1>
             <div className="w-full flex flex-col shadow-2xl p-4 md:p-6  gap-5 items-start rounded-2xl mb-5 overflow-y-auto">
                 <div className="w-full flex h-min flex-col md:flex-row  items-center gap-5 ">
@@ -46,10 +47,11 @@ export default function GetInTouchDrawer({ toggleDrawer }) {
                         <p className="font-light text-xs">Software Engineer - RND</p>
                     </div>
                 </div>
-                <div className="flex w-full flex-col gap-5 md:gap-8 pr-3 mt-1 mb-2 md:mb-5">
+                <div className="flex w-full flex-col p-3  gap-5 md:gap-8 pr-3 mt-1 mb-2 md:mb-5 overflow-y-auto">
                     <ImageRenderer src={Linkedinsvg} name={"@saibarathr"} link={'https://www.linkedin.com/in/saibarath-r'} />
                     <ImageRenderer src={Gmail} name={"Saibarathr@gmail.com"} link={'mailto:saibarathr@gmail.com'} />
-                    <ImageRenderer src={Whatsapp} name={"@Sai Barath R"} link={' https://wa.me/919843621231 '} />
+                    <ImageRenderer src={Github} name={"@SaiBarathR"} link={'https://github.com/SaiBarathR'} />
+                    <ImageRenderer src={Whatsapp} name={"Sai Barath R"} link={' https://wa.me/919843621231 '} />
                     <ImageRenderer src={Twitter} name={"@saibarathr"} link={'https://twitter.com/saibarathr'} />
                 </div>
             </div>
