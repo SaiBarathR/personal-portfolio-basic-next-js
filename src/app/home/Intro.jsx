@@ -43,10 +43,10 @@ export default function Intro() {
                 </div>
             </div>
             <SwipeableEdgeDrawer open={openGetInfo} toggleDrawer={toggleDrawer} position={"right"} width="auto">
-                <GetInTouchDrawer toggleDrawer={toggleDrawer} />
+                <GetInTouchDrawer open={openGetInfo} toggleDrawer={toggleDrawer} />
             </SwipeableEdgeDrawer>
             <SwipeableEdgeDrawer open={openProjects} toggleDrawer={toggleProjectsDrawer} position={"left"} width={"50%"}>
-                <Projects toggleDrawer={toggleProjectsDrawer} />
+                <Projects open={openProjects} toggleDrawer={toggleProjectsDrawer} />
             </SwipeableEdgeDrawer>
         </>
     )
