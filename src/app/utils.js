@@ -1000,10 +1000,10 @@ export const professionalProjectDetails = [{
 {
     name: "Chat Bot - Ozonetel Communications",
     created_at: new Date("2023-05-19"),
-    id: 3,
+    id: 4,
     language: "Javascript",
     description: "Created this chat bot for Ozonetel Partners, where customers can connect to get information about products and services of partner companies and they can subscribe to podcasts, fill forms or connect to an any live agent to learn more. All partner can just edit the config file and ready to go with their own version of chatbot according to their requirements.",
-    topics: ["Websocket", "React", "TypeScript", "REST APIs", "axios","Webpack"]
+    topics: ["Websocket", "React", "TypeScript", "REST APIs", "axios", "Webpack"]
 },
 
 ]

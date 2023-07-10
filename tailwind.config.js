@@ -17,6 +17,12 @@ module.exports = {
         'spin-fast': 'spin 1s linear',
         wiggle: 'wiggle 1s ease-in-out infinite',
         text: 'text 2s ease infinite',
+        appear: 'delay .6s ease-out',
+        'appear-1': 'delay .8s ease-out',
+        'appear-2': 'delay 1s ease-out',
+        'appear-4': 'delay 1.2s ease-out',
+        'appear-6': 'delay 1.4s ease-out',
+        disappear: 'disappear .4s ease-in',
       },
       keyframes: {
         wiggle: {
@@ -32,6 +38,14 @@ module.exports = {
             'background-size': '200% 200%',
             'background-position': 'right center',
           },
+        },
+        delay: {
+          '0%': { scale: 0, opacity: 0 },
+          '100%': { scale: 1, opacity: 1 }
+        },
+        disappear: {
+          '0%': { scale: 1, opacity: 1 },
+          '100%': { scale: 0, opacity: 0 }
         },
       }
     },
