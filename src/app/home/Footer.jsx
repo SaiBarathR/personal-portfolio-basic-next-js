@@ -4,6 +4,7 @@ import { space_grotesk } from "@/font";
 import Twitter from '../../icons/twitter.svg'
 import Instagram from '../../icons/instagram.svg'
 import Twitch from '../../icons/twitch.svg'
+import Github from '../../icons/github.svg'
 import Image from "next/image";
 
 export default function Footer() {
@@ -18,6 +19,7 @@ export default function Footer() {
                 <Image src={Twitter} alt="Twitter" onClick={handleIconClick('https://twitter.com/saibarathr')} />
                 <Image src={Instagram} alt="Instagram" onClick={handleIconClick("https://www.instagram.com/saibarath_r/")} />
                 <Image src={Twitch} alt="twitch" onClick={handleIconClick("https://www.twitch.tv/meteoldrag0")} />
+                <Image src={Github} alt="git" onClick={handleIconClick("https://github.com/SaiBarathR")} />
             </div>
             <p className={"text-[#E6EBE0] text-base text-center animate-text " + space_grotesk.className}>All magic belongs to the CSS sorcerer. © 2023</p>
         </div>
