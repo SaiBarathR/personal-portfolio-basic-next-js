@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { space_grotesk } from "@/font";
 import { useState } from "react";
-import SwipeableEdgeDrawer from "../Components/CustomDrawer";
 import GetInTouchDrawer from "./GetInTouch";
 import Projects from "./Projects";
+import CustomDrawer from "../Components/CustomDrawer";
 
 
 export default function Intro() {
@@ -42,12 +42,12 @@ export default function Intro() {
                     </div>
                 </div>
             </div>
-            <SwipeableEdgeDrawer open={openGetInfo} toggleDrawer={toggleDrawer} position={"right"} width="auto">
+            <CustomDrawer open={openGetInfo} toggleDrawer={toggleDrawer} position={"right"} width="auto">
                 <GetInTouchDrawer open={openGetInfo} toggleDrawer={toggleDrawer} />
-            </SwipeableEdgeDrawer>
-            <SwipeableEdgeDrawer open={openProjects} toggleDrawer={toggleProjectsDrawer} position={"left"} width={"50%"}>
+            </CustomDrawer>
+            <CustomDrawer open={openProjects} toggleDrawer={toggleProjectsDrawer} position={"left"} width={"50%"}>
                 <Projects open={openProjects} toggleDrawer={toggleProjectsDrawer} />
-            </SwipeableEdgeDrawer>
+            </CustomDrawer>
         </>
     )
 }

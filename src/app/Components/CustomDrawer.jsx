@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Box, SwipeableDrawer, useMediaQuery } from "@mui/material";
 import { grey } from '@mui/material/colors';
 
-function SwipeableEdgeDrawer({ open, toggleDrawer, position, width, ...props }) {
+function CustomDrawer({ open, toggleDrawer, position, width, ...props }) {
     const iOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
     const isMobile = useMediaQuery('(max-width:767px)')
 
@@ -30,4 +30,4 @@ function SwipeableEdgeDrawer({ open, toggleDrawer, position, width, ...props }) 
 }
 
 
-export default SwipeableEdgeDrawer;
+export default CustomDrawer;
