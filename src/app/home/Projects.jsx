@@ -83,12 +83,17 @@ function ProjectList({ repositoryDetails, header }) {
         </div>
         <div className=" w-full items-center justify-center flex flex-col gap-4 mb-4 ">
             {openPersonalPRojects && repositoryDetails.map((repo, index) => (
-                <div key={repo.id} className={`w-11/12 gap-3  p-4 flex-col ${isProfessionalProject ? '' : 'cursor-pointer'} bg-[#F6F7F9] rounded-2xl shadow-md ${isProfessionalProject ? '' : 'hover:bg-slate-200 hover:scale-105 transition ease-in-out delay-75'}  flex`}>
+                <div
+                    key={repo.id}
+                    onClick={() => repo.html_url && window.open(repo.html_url, '_blank', 'noreferrer')}
+                    className={`w-11/12 gap-3  p-4 flex-col ${isProfessionalProject ? '' : 'cursor-pointer'} bg-[#F6F7F9] rounded-2xl shadow-md ${isProfessionalProject ? '' : 'hover:bg-slate-200 hover:scale-105 transition ease-in-out delay-75'}  flex`}
+                >
                     <div className="flex  w-full justify-between">
                         <p className="uppercase font-medium">{repo.name}</p>
                         <p>{formatDate(repo.created_at)}</p>
                     </div>
                     <p >{repo.description}</p>
+                    {repo.homepage && <div className="bg-slate-300 hover:bg-slate-500 hover:text-white transition ease-in-out hover:scale-105  break-words p-2 gap-1 w-max  rounded-2xl" onClick={() => window.open(repo.homepage, '_blank', 'noreferrer')}> {repo.homepage}</div>}
                     <p className="uppercase font-medium">{repo.language}</p>
                     <div className="grid grid-cols-2 lg:grid-cols-3 text-center gap-2">
                         {repo.topics.map((topic) => <div className="bg-slate-300 break-words capitalize  p-2 gap-1  rounded-2xl" key={topic}> {topic}</div>)}
