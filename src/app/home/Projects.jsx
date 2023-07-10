@@ -47,14 +47,13 @@ export default function Projects({ toggleDrawer }) {
         link.includes('mail') ? window.open(link) : window.open(link, '_blank', 'noreferrer')
     }
 
-    return <div className={" w-full md:w-auto bg-white h-full flex flex-row " + space_grotesk.className}>
-        <div className="w-full flex flex-col m-2 ml-5 md:ml-10 md:m-6  gap-9 items-center ">
-            <h1 className="font-semibold text-3xl ">Projects</h1>
-            <ProjectList repositoryDetails={repositoryDetails} header="Github Projects" />
-            <ProjectList
-                header="Professional Projects"
-                repositoryDetails={professionalProjectDetails}
-            />
+    return <div className={" w-full md:w-auto  bg-white h-full flex flex-row " + space_grotesk.className}>
+        <div className="w-full flex flex-col  items-center ">
+            <h1 className="font-semibold text-3xl m-2">Projects</h1>
+            <div className="w-full h-6/6 overflow-y-auto  flex flex-col p-2 pl-5 md:p-10 md:pl-14 gap-9 items-center ">
+                <ProjectList repositoryDetails={repositoryDetails} header="Github Projects" />
+                <ProjectList header="Professional Projects" repositoryDetails={professionalProjectDetails} />
+            </div>
         </div>
         <div className="w-[6px] h-[30px] bg-slate-400 rounded-lg flex self-center items-center m-2 md:mr-2 cursor-pointer " onMouseDown={toggleDrawer(false)}></div>
     </div>
@@ -70,7 +69,7 @@ function ProjectList({ repositoryDetails, header }) {
         return new Date(string).toLocaleDateString([], options);
     }
 
-    return <div className="w-full flex flex-col shadow-2xl items-start  rounded-2xl" >
+    return <div className="w-full flex flex-col shadow md:shadow-2xl items-start  rounded-2xl" >
         <div className="p-4 md:p-6 mt-3 flex justify-between gap-8 w-full items-center" >
             <h1 className="font-normal text-2xl">{header}</h1>
             <Image className={`cursor-pointer min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-[#F6F7F9] hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`} onClick={() => setOpenPersonalPRojects((prev) => !prev)} src={DropDown} alt={"arrow"} />

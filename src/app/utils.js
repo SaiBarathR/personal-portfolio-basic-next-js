@@ -976,17 +976,34 @@ export const professionalProjectDetails = [{
     name: "Agent Portal - Ozonetel Communications",
     created_at: new Date("2023-02-06"),
     id: 1,
-    language: "React",
+    language: "Javascript",
     description: "Agent Portal is a cloud-based call center solution that provides: 1. WebRTC calls, chats, and notifications for seamless communication. 2. Multiple types of campaigns, such as outbound, inbound, progressive, blended, and predictive for different business needs. 3. Conference and transfer functions for collaboration and customer service. 4. Interactive charts and graphs for data visualisation and analysis.",
-    topics: ["Redux", "Websocket", "WebRTC", "Service Worker", "TypeScript", "REST APIs"]
+    topics: ["Redux", "Websocket", "WebRTC", "Service Worker", "TypeScript", "React"]
 
 },
 {
     name: "Admin Portal - Ozonetel Communications",
     created_at: new Date("2022-09-05"),
-    id: 1,
-    language: "React",
-    description: "Agent Portal is a cloud-based call center solution to manage the agents from agent protal: This web application is used by more than 200,000 people to automate agent workloads and view analysis and performace of agents in a given organization. It allows them to view their performance metrics, schedule their shifts, access training materials, and communicate with their supervisors and peers. The site is perfectly optimised for speed and performance, responsiveness and follows the best practices of web development.",
-    topics: ["Websocket", "WebRTC", "Service Worker", "TypeScript", "REST APIs"]
-}
+    id: 2,
+    language: "Javascript",
+    description: "Admin Portal is a cloud-based call center solution to manage the agents from agent protal: This web application is used by more than 200,000 people to automate agent workloads and view analysis and performace of agents in a given organization. It allows them to view their performance metrics, schedule their shifts, access training materials, and communicate with their supervisors and peers. The site is perfectly optimised for speed and performance, responsiveness and follows the best practices of web development.",
+    topics: ["Websocket", "React", "Formik-Mui-AgGrid", "TypeScript", "Chat.js", "Axios"]
+},
+{
+    name: "WhatsApp Templates - Ozonetel Communications",
+    created_at: new Date("2023-03-27"),
+    id: 3,
+    language: "Javascript",
+    description: "Whatapp Templates are used to create and manage pre-configured templates for Agents from a call center to use them to connect with customers. It can handle multiple languages with text, voice, pictures, videos and Agent can preview the templates before saving.",
+    topics: ["Webpack", "React", "TypeScript", "REST APIs", "HTML-CSS"]
+},
+{
+    name: "Chat Bot - Ozonetel Communications",
+    created_at: new Date("2023-05-19"),
+    id: 3,
+    language: "Javascript",
+    description: "Created this chat bot for Ozonetel Partners, where customers can connect to get information about products and services of partner companies and they can subscribe to podcasts, fill forms or connect to an any live agent to learn more. All partner can just edit the config file and ready to go with their own version of chatbot according to their requirements.",
+    topics: ["Websocket", "React", "TypeScript", "REST APIs", "axios","Webpack"]
+},
+
 ]
