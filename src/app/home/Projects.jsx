@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import DropDown from '../../icons/dropdown.svg'
 import Image from "next/image";
 import { Grow, Slide } from "@mui/material";
+import { professionalProjectDetails } from "../utils";
 
 
 export default function Projects({ toggleDrawer }) {
@@ -52,15 +53,8 @@ export default function Projects({ toggleDrawer }) {
             <ProjectList repositoryDetails={repositoryDetails} header="Github Projects" />
             <ProjectList
                 header="Professional Projects"
-                repositoryDetails={[{
-                    name: "Agent Portal - Ozonetel Communications",
-                    created_at: new Date("2022-09-05"),
-                    id: 1,
-                    language: "React",
-                    description: "Agent Portal is a cloud-based call center solution that provides: 1. WebRTC calls, chats, and notifications for seamless communication. 2. Multiple types of campaigns, such as outbound, inbound, progressive, blended, and predictive for different business needs. 3. Conference and transfer functions for collaboration and customer service. 4. Interactive charts and graphs for data visualisation and analysis.",
-                    topics: ["Redux", "Websocket", "WebRTC", "Service Worker", "TypeScript", "REST APIs"]
-
-                }]} />
+                repositoryDetails={professionalProjectDetails}
+            />
         </div>
         <div className="w-[6px] h-[30px] bg-slate-400 rounded-lg flex self-center items-center m-2 md:mr-2 cursor-pointer " onMouseDown={toggleDrawer(false)}></div>
     </div>
@@ -93,7 +87,7 @@ function ProjectList({ repositoryDetails, header }) {
                         <p>{formatDate(repo.created_at)}</p>
                     </div>
                     <p >{repo.description}</p>
-                    {repo.homepage && <div className="bg-slate-300 hover:bg-slate-500 hover:text-white transition ease-in-out hover:scale-105  break-words p-2 gap-1 w-max  rounded-2xl" onClick={() => window.open(repo.homepage, '_blank', 'noreferrer')}> {repo.homepage}</div>}
+                    {repo.homepage && <div className="bg-slate-300 hover:bg-slate-500 hover:text-white transition ease-in-out hover:scale-105 w-fit break-all  p-2 gap-1  rounded-2xl" onClick={() => window.open(repo.homepage, '_blank', 'noreferrer')}> {repo.homepage}</div>}
                     <p className="uppercase font-medium">{repo.language}</p>
                     <div className="grid grid-cols-2 lg:grid-cols-3 text-center gap-2">
                         {repo.topics.map((topic) => <div className="bg-slate-300 break-words capitalize  p-2 gap-1  rounded-2xl" key={topic}> {topic}</div>)}
