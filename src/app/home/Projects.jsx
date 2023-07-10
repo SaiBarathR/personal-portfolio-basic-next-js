@@ -69,7 +69,7 @@ function ProjectList({ repositoryDetails, header, open, className }) {
     }
 
     return <div className={"w-full bg-cyan-100 flex flex-col shadow md:shadow-2xl items-start  rounded-2xl " + className} >
-        <div className={"p-4 md:p-6 mt-3 flex justify-between gap-8 w-full items-center "}>
+        <div className={"p-4 md:p-6  flex justify-between gap-8 w-full items-center "}>
             <h1 className="font-normal text-2xl">{header}</h1>
             <Image className={`cursor-pointer min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-cyan-200 hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`} onClick={() => setOpenPersonalPRojects((prev) => !prev)} src={DropDown} alt={"arrow"} />
         </div>
