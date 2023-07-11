@@ -17,7 +17,7 @@ export default function LinkedInShowcase() {
                         Get amazed by my professional journey, documented on my Linkedin Profile!
                     </p>
                     <Image src={LinkedInProfilePic} onClick={() => window.open('https://www.linkedin.com/in/saibarath-r', '_blank', 'noreferrer')} alt="profile"
-                        className="cursor-pointer md:max-h-[155px] md:max-w-[155px] md:min-h-[155px] md:min-w-[155px] max-h-[200px] max-w-[200px] min-h-[200px] min-w-[200px] lg:max-h-[250px] lg:max-w-[250px] lg:min-h-[250px] lg:min-w-[250px] hover:scale-110 hover:transition ease-in-out delay-150"
+                        className="cursor-pointer dark:opacity-95 md:max-h-[155px] md:max-w-[155px] md:min-h-[155px] md:min-w-[155px] max-h-[200px] max-w-[200px] min-h-[200px] min-w-[200px] lg:max-h-[250px] lg:max-w-[250px] lg:min-h-[250px] lg:min-w-[250px] hover:scale-110 hover:transition ease-in-out delay-150"
                     />
                 </div>
             </div>
