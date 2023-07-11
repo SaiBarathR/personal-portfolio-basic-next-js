@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { useTheme } from "next-themes";
-import { space_grotesk } from "@/font";
+import { space_grotesk } from "@/icons/font";
 
 export const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false);

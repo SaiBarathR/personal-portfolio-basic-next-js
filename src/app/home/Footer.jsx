@@ -1,6 +1,6 @@
 'use client'
 
-import { space_grotesk } from "@/font";
+import { space_grotesk } from "@/icons/font";
 import Twitter from '../../icons/twitter.svg'
 import Instagram from '../../icons/instagram.svg'
 import Twitch from '../../icons/twitch.svg'

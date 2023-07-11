@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Arrow from '../../icons/arraow.png'
-import { space_grotesk } from "@/font";
+import { space_grotesk } from "@/icons/font";
 
 export default function Honors() {
 

@@ -1,4 +1,4 @@
-import { space_grotesk } from "@/font";
+import { space_grotesk } from "@/icons/font";
 import { useMemo } from "react"
 
 export default function Description() {

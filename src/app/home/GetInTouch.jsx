@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import { space_grotesk } from "@/font";
+import { space_grotesk } from "@/icons/font";
 import Twitter from '../../icons/twitter.svg'
 import Gmail from '../../icons/gmail.svg'
 import Linkedinsvg from '../../icons/linkedin.svg'

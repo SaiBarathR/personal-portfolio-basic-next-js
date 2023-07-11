@@ -1,6 +1,6 @@
 'use client'
 
-import { space_grotesk } from "@/font"
+import { space_grotesk } from "@/icons/font"
 import { getGithubUserDetails, getRepos } from "@/service/gitHubServices";
 import { useEffect, useMemo, useRef, useState } from "react"
 import DropDown from '../../icons/dropdown.svg'
@@ -42,7 +42,7 @@ export default function Projects({ toggleDrawer, open, currentTheme }) {
         link.includes('mail') ? window.open(link) : window.open(link, '_blank', 'noreferrer')
     }
 
-    return <div className={" w-full  md:w-auto  dark:bg-gradient-to-r from-emerald-500 from-20% via-sky-500 via-100% bg-teal-50 h-full flex flex-row " + space_grotesk.className}>
+    return <div className={" w-full  md:w-auto  dark:bg-gradient-to-r dark:from-emerald-500 dark:from-20% dark:via-sky-500 dark:via-100% bg-gradient-to-br from-teal-200 from 20% via-lime-400 via-100%  bg-teal-100 h-full flex flex-row " + space_grotesk.className}>
         <div className="w-full dark:text-black flex flex-col  items-center ">
             <h1 className="font-semibold text-3xl m-2">Projects</h1>
             <div className="w-full h-6/6 overflow-y-auto min-h-[500px]  flex flex-col p-2 pl-5 md:p-7 md:pl-11 gap-9 items-center ">
@@ -64,7 +64,7 @@ function ProjectList({ repositoryDetails, header, open, className, currentTheme 
         return new Date(string).toLocaleDateString([], options);
     }
 
-    return <div className={"w-full bg-cyan-100 dark:bg-[#f3cd9c2a] flex flex-col shadow md:shadow-2xl items-start  rounded-2xl " + className} >
+    return <div className={"w-full bg-cyan-100 dark:bg-[#f3cd9c2a] bg-gradient-to-br from-lime-200 from 20% via-teal-400 via-100%  flex flex-col shadow md:shadow-2xl items-start  rounded-2xl " + className} >
         <div className={"p-4 md:p-6  flex justify-between gap-8 w-full items-center "}>
             <h1 className="font-normal text-2xl">{header}</h1>
             <svg
