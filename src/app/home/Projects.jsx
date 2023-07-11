@@ -42,7 +42,7 @@ export default function Projects({ toggleDrawer, open, currentTheme }) {
         link.includes('mail') ? window.open(link) : window.open(link, '_blank', 'noreferrer')
     }
 
-    return <div className={" w-full md:w-auto  dark:bg-gradient-to-r from-emerald-500 from-20% via-sky-500 via-80% to-indigo-500 to-100% bg-teal-50 h-full flex flex-row " + space_grotesk.className}>
+    return <div className={" w-full  md:w-auto  dark:bg-gradient-to-r from-emerald-500 from-20% via-sky-500 via-100% bg-teal-50 h-full flex flex-row " + space_grotesk.className}>
         <div className="w-full dark:text-black flex flex-col  items-center ">
             <h1 className="font-semibold text-3xl m-2">Projects</h1>
             <div className="w-full h-6/6 overflow-y-auto min-h-[500px]  flex flex-col p-2 pl-5 md:p-7 md:pl-11 gap-9 items-center ">
@@ -50,7 +50,7 @@ export default function Projects({ toggleDrawer, open, currentTheme }) {
                 <ProjectList currentTheme={currentTheme} open={open} className={open ? " animate-appear-1 " : "animate-disappear"} header="Professional Projects" repositoryDetails={professionalProjectDetails} />
             </div>
         </div>
-        <div className="w-[6px] h-[30px] bg-slate-400 dark:bg-black rounded-lg flex self-center items-center m-2 md:mr-2 cursor-pointer " onMouseDown={toggleDrawer(false)}></div>
+        <div className="w-[7px] h-[38px] bg-slate-400 dark:bg-black rounded-lg flex self-center items-center m-2 md:mr-2 cursor-pointer " onMouseDown={toggleDrawer(false)}></div>
     </div>
 }
 
