@@ -1,3 +1,5 @@
+import { ThemeProvider } from './DarkThemeProvider'
+import { ThemeSwitcher } from './components/ModeSwitcherButton'
 import './globals.css'
 import { Silkscreen } from 'next/font/google'
 
@@ -14,8 +16,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body className={silkscreen.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={silkscreen.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeSwitcher />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
