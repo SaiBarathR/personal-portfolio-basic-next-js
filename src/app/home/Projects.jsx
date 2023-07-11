@@ -67,19 +67,12 @@ function ProjectList({ repositoryDetails, header, open, className, currentTheme 
     return <div className={"w-full bg-cyan-100 dark:bg-[#f3cd9c2a] flex flex-col shadow md:shadow-2xl items-start  rounded-2xl " + className} >
         <div className={"p-4 md:p-6  flex justify-between gap-8 w-full items-center "}>
             <h1 className="font-normal text-2xl">{header}</h1>
-            {currentTheme === "dark" ? <svg
-                className={`cursor-pointer path-black min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-emerald-400 hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`}
+            <svg
+                className={`cursor-pointer path-black min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-cyan-200  dark:hover:bg-emerald-600 hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`}
                 onClick={() => setOpenPersonalPRojects((prev) => !prev)} src={DropDown} alt={"arrow"}
                 width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.16797 7L10.0013 13.6667L15.8346 7" stroke="#000000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-            </svg> : <svg
-                className={`cursor-pointer path-black min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-cyan-200 hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`}
-                onClick={() => setOpenPersonalPRojects((prev) => !prev)} src={DropDown} alt={"arrow"}
-                width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.16797 7L10.0013 13.6667L15.8346 7" stroke="#99A0A8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4.16797 7L10.0013 13.6667L15.8346 7" stroke={currentTheme === "dark" ? "#000000" : "#99A0A8"} strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            }
-
         </div>
         <Grow timeout={{ enter: 600, appear: 600, exit: 300, }} in={openPersonalPRojects} mountOnEnter unmountOnExit>
             <div className=" w-full items-center justify-center flex flex-col gap-6 mb-4 ">
