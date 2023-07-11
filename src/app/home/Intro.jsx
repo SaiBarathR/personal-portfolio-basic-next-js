@@ -56,7 +56,7 @@ export default function Intro() {
                 <GetInTouchDrawer open={openGetInfo} toggleDrawer={toggleDrawer} />
             </CustomDrawer>
             <CustomDrawer open={openProjects} toggleDrawer={toggleProjectsDrawer} position={"left"} width={"50%"}>
-                <Projects open={openProjects} toggleDrawer={toggleProjectsDrawer} />
+                <Projects open={openProjects} toggleDrawer={toggleProjectsDrawer} currentTheme={currentTheme} />
             </CustomDrawer>
         </>
     )
