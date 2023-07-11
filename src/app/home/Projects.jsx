@@ -39,14 +39,12 @@ export default function Projects({ toggleDrawer, open }) {
         getRepositoryList()
     }, [])
 
-
-
     function onClickContact(link, name) {
         copyTextToClipboard(name)
         link.includes('mail') ? window.open(link) : window.open(link, '_blank', 'noreferrer')
     }
 
-    return <div className={" w-full md:w-auto  bg-teal-50 h-full flex flex-row " + space_grotesk.className}>
+    return <div className={" w-full md:w-auto dark:bg-blue-950 bg-teal-50 h-full flex flex-row " + space_grotesk.className}>
         <div className="w-full flex flex-col  items-center ">
             <h1 className="font-semibold text-3xl m-2">Projects</h1>
             <div className="w-full h-6/6 overflow-y-auto min-h-[500px]  flex flex-col p-2 pl-5 md:p-7 md:pl-11 gap-9 items-center ">
