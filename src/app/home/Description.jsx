@@ -9,12 +9,12 @@ export default function Description() {
     ], []);
 
     return (
-        <div className="w-full min-h-[400px] flex flex-col  items-center bg-[#da7422]">
+        <div className="w-full min-h-[400px] flex flex-col  items-center bg-[#da7422] dark:bg-teal-800">
             <div className="max-w-[1440px] w-full p-12 flex flex-col gap-7 text-center items-start">
-                <h2 className="text-black text-4xl 2xl:text-6xl text-center  font-normal md:text-5xl">
+                <h2 className="text-black text-4xl 2xl:text-6xl text-center  font-normal md:text-5xl ">
                     Mastering the Front-End
                 </h2>
-                {description.map((paragraph, index) => <p key={index + paragraph} className={"text-white  text-start lg:max-w-[60%] font-bold text-xl " + space_grotesk.className}>{paragraph}</p>)}
+                {description.map((paragraph, index) => <p key={index + paragraph} className={"text-white dark:text-green-200  text-start lg:max-w-[60%] font-bold text-xl " + space_grotesk.className}>{paragraph}</p>)}
             </div>
         </div>
     )
