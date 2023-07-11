@@ -1,5 +1,4 @@
 import { ThemeProvider } from './DarkThemeProvider'
-import { ThemeSwitcher } from './components/ModeSwitcherButton'
 import './globals.css'
 import { Silkscreen } from 'next/font/google'
 

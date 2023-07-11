@@ -5,10 +5,10 @@ import { space_grotesk } from "@/font";
 import { useMemo, useState } from "react";
 import GetInTouchDrawer from "./GetInTouch";
 import Projects from "./Projects";
-import CustomDrawer from "../components/CustomDrawer";
+import CustomDrawer from "../Components/CustomDrawer";
 import { useTheme } from "next-themes";
 import Script from "next/script";
-import { ThemeSwitcher } from "../components/ModeSwitcherButton";
+import { ThemeSwitcher } from "../Components/ModeSwitcherButton";
 
 
 export default function Intro() {
