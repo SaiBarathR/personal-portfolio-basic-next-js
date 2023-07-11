@@ -5,7 +5,7 @@ import { space_grotesk } from "@/font";
 import { useState } from "react";
 import GetInTouchDrawer from "./GetInTouch";
 import Projects from "./Projects";
-import CustomDrawer from "../Components/CustomDrawer";
+import CustomDrawer from "../components/CustomDrawer";
 
 
 export default function Intro() {
