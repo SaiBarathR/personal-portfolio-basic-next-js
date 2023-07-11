@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { useTheme } from "next-themes";
+import { space_grotesk } from "@/font";
 
 export const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false);
     const { systemTheme, theme, setTheme } = useTheme();
+    const currentTheme = useMemo(() => theme === "system" ? systemTheme : theme, [systemTheme, theme])
 
     useEffect(() => {
         setMounted(true);
@@ -15,11 +17,24 @@ export const ThemeSwitcher = () => {
     }
 
     return (
-        <button
-            className={`w-fit absolute right-5 top-2 p-2 rounded-md hover:scale-110 active:scale-100 duration-200 bg-slate-200 dark:bg-[#212933]`}
-            onClick={() => setTheme(theme === "system" ? systemTheme === "dark" ? "light" : "dark" : theme === "dark" ? "light" : "dark")}
-        >
-            {theme === "system" ? systemTheme : theme}
-        </button>
+        <>
+            <label className="theme animate-appear">
+                <span className="theme__toggle-wrap">
+                    <input id="theme" className="theme__toggle cursor-pointer" onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")} type="checkbox" role="switch" checked={currentTheme === "dark"} />
+                    <span className="theme__fill"></span>
+                    <span className="theme__icon">
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                        <span className="theme__icon-part"></span>
+                    </span>
+                </span>
+            </label>
+        </>
     );
 };

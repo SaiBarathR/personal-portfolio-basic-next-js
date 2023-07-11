@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={silkscreen.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ThemeSwitcher />
           {children}
         </ThemeProvider>
       </body>
