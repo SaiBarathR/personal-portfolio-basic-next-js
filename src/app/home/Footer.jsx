@@ -21,7 +21,7 @@ export default function Footer() {
         return () => window.open(link, '_blank', 'noreferrer')
     }
 
-    return <div className="dark:bg-black bg-white flex w-full items-center justify-center">
+    return <div className="dark:bg-black bg-[#F4E9CD] flex w-full items-center justify-center">
         <div className="p-12 max-w-[1440px] w-full gap-5 flex flex-col items-center justify-center">
             <div className="flex flex-row gap-3 cursor-pointer" >
                 {imageList.map((img, index) => <Image key={img.url} className="transition ease-in-out delay-75  hover:scale-125 " src={img.src} alt={img.alt} onClick={handleIconClick(img.url)} />)}
