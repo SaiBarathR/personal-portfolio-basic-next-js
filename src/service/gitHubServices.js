@@ -1,9 +1,7 @@
 export async function getGithubUserDetails(githubUser) {
     return fetch(`https://api.github.com/users/${githubUser}`, {
         username: githubUser,
-        headers: {
-            'X-GitHub-Api-Version': '2022-11-28'
-        }
+        headers: { 'X-GitHub-Api-Version': '2022-11-28' }
     }).then((response) => response.json()).then((data) => data);
 }
 
