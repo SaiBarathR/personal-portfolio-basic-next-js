@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { space_grotesk } from "@/icons/font";
 import { useMemo, useState } from "react";
-import GetInTouchDrawer from "./GetInTouch";
-import Projects from "./Projects";
-import CustomDrawer from "../Components/CustomDrawer";
 import { useTheme } from "next-themes";
 import Script from "next/script";
 import { ThemeSwitcher } from "../Components/ModeSwitcherButton";
+import dynamic from 'next/dynamic'
+const CustomDrawer = dynamic(() => import('../Components/CustomDrawer'), { ssr: false, })
+const GetInTouchDrawer = dynamic(() => import('./GetInTouch'), { ssr: false, })
+const Projects = dynamic(() => import('./Projects'), { ssr: false, })
 
 
 export default function Intro() {
