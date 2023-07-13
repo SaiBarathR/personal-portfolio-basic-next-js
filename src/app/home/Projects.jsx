@@ -9,18 +9,7 @@ import { professionalProjectDetails } from "../utils";
 
 export default function Projects({ toggleDrawer, open, currentTheme }) {
 
-    const [gitHubDetail, setGitHubDetail] = useState({});
     const [repositoryDetails, setRepositoryDetails] = useState([])
-
-    async function getGitubUserInfo() {
-        try {
-            const resp = await getGithubUserDetails('saibarathr');
-            setGitHubDetail(resp);
-        }
-        catch (error) {
-            console.error(error)
-        }
-    }
 
     async function getRepositoryList() {
         try {
@@ -33,9 +22,8 @@ export default function Projects({ toggleDrawer, open, currentTheme }) {
     }
 
     useEffect(() => {
-        getGitubUserInfo()
-        getRepositoryList()
-    }, [])
+        open && getRepositoryList()
+    }, [open])
 
     function onClickContact(link, name) {
         copyTextToClipboard(name)
