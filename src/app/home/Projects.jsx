@@ -42,9 +42,9 @@ export default function Projects({ toggleDrawer, open, currentTheme }) {
     </div>
 }
 
-function ProjectList({ repositoryDetails, header, open, className, currentTheme }) {
+export function ProjectList({ repositoryDetails, header, open, className, currentTheme, defaultOpen = false, enableDropDown = true }) {
 
-    const [openPersonalPRojects, setOpenPersonalPRojects] = useState(false);
+    const [openPersonalPRojects, setOpenPersonalPRojects] = useState(defaultOpen);
     const isProfessionalProject = useMemo(() => header === "Professional Projects", [header])
 
     function formatDate(string) {
@@ -55,12 +55,12 @@ function ProjectList({ repositoryDetails, header, open, className, currentTheme 
     return <div className={"w-full bg-cyan-100 dark:bg-[#f3cd9c2a] bg-gradient-to-br from-lime-200 from 20% via-teal-400 via-100%  flex flex-col shadow md:shadow-2xl items-start  rounded-2xl " + className} >
         <div className={"p-4 md:p-6  flex justify-between gap-8 w-full items-center "}>
             <h1 className="font-normal text-2xl">{header}</h1>
-            <svg
+            {enableDropDown && <svg
                 className={`cursor-pointer path-black min-w-[30px] min-h-[30px] p-1 rounded-full hover:bg-cyan-200  dark:hover:bg-emerald-600 hover:scale-125 ${openPersonalPRojects ? " rotate-180" : ""}`}
                 onClick={() => setOpenPersonalPRojects((prev) => !prev)} src={DropDown} alt={"arrow"}
                 width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.16797 7L10.0013 13.6667L15.8346 7" stroke={currentTheme === "dark" ? "#000000" : "#99A0A8"} strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            </svg>}
         </div>
         <Grow timeout={{ enter: 600, appear: 600, exit: 300, }} in={openPersonalPRojects} mountOnEnter unmountOnExit>
             <div className=" w-full items-center justify-center flex flex-col gap-6 mb-4 ">
@@ -76,7 +76,7 @@ function ProjectList({ repositoryDetails, header, open, className, currentTheme 
                         {repo.homepage && <div className="bg-teal-400 dark:bg-teal-300 hover:bg-teal-600 dark:hover:bg-teal-600 hover:text-white transition ease-in-out hover:scale-105 w-fit break-all  p-2 gap-1  rounded-2xl" onClick={() => window.open(repo.homepage, '_blank', 'noreferrer')}> {repo.homepage}</div>}
                         <p className="uppercase font-medium">{repo.language}</p>
                         <div className="grid grid-cols-2 lg:grid-cols-3 text-center gap-2">
-                            {repo.topics.map((topic) => <div key={topic} className="bg-teal-400 dark:bg-teal-300 animate-appear-1 break-words capitalize  p-2 gap-1  rounded-2xl" > {topic}</div>)}
+                            {repo.topics.map((topic) => <div key={topic} className="bg-teal-400 dark:bg-teal-300 animate-appear-1 break-words capitalize items-center flex justify-center  p-2 gap-1  rounded-2xl" > {topic}</div>)}
                         </div>
                     </div>
                 ))

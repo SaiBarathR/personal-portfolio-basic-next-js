@@ -20,7 +20,7 @@ export default function GetInTouchDrawer({ toggleDrawer, open }) {
     </div>
 }
 
-function GeitInTouchContent({ open }) {
+export function GeitInTouchContent({ open }) {
 
     async function copyTextToClipboard(text) {
         setTimeout(async () => {
@@ -54,12 +54,12 @@ function GeitInTouchContent({ open }) {
                 <p className="font-light text-xs">Software Engineer - RND</p>
             </div>
         </div>
-        <div className="flex w-full flex-col p-3  gap-5 md:gap-8 pr-3 mt-1 mb-2 md:mb-5 overflow-y-auto">
-            <ImageRenderer className={"animate-appear"} src={Linkedinsvg} name={"@saibarathr"} link={'https://www.linkedin.com/in/saibarath-r'} />
+        <div className="flex w-full flex-col p-4 lg:p-5  gap-5 md:gap-8 pr-3 mt-1 mb-2 md:mb-5 overflow-y-auto">
+            <ImageRenderer className={"animate-appear"} src={Linkedinsvg} name={"@Saibarathr"} link={'https://www.linkedin.com/in/saibarath-r'} />
             <ImageRenderer className={"animate-appear-1"} src={Gmail} name={"Saibarathr@gmail.com"} link={'mailto:saibarathr@gmail.com'} />
             <ImageRenderer className={"animate-appear-2"} src={Github} name={"@SaiBarathR"} link={'https://github.com/SaiBarathR'} />
             <ImageRenderer className={"animate-appear-4"} src={Whatsapp} name={"Sai Barath R"} link={' https://wa.me/919843621231 '} />
-            <ImageRenderer className={"animate-appear-6"} src={Twitter} name={"@saibarathr"} link={'https://twitter.com/saibarathr'} />
+            <ImageRenderer className={"animate-appear-6"} src={Twitter} name={"@Saibarathr"} link={'https://twitter.com/saibarathr'} />
         </div>
     </div>
 }
