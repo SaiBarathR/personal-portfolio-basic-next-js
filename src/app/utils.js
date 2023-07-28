@@ -995,7 +995,7 @@ export const professionalProjectDetails = [{
     id: 3,
     language: "Javascript",
     description: "Whatapp Templates are used to create and manage pre-configured templates for Agents from a call center to use them to connect with customers. It can handle multiple languages with text, voice, pictures, videos and Agent can preview the templates before saving.",
-    topics: ["Webpack", "React", "TypeScript", "REST APIs", "HTML-CSS"]
+    topics: ["Webpack", "Meta-API", "React", "TypeScript", "REST APIs", "HTML-CSS"]
 },
 {
     name: "Chat Bot - Ozonetel Communications",
