@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { space_grotesk } from "@/icons/font";
-import Twitter from '../../icons/twitter.svg'
+import X from '../../icons/x.svg'
 import Gmail from '../../icons/gmail.svg'
 import Linkedinsvg from '../../icons/linkedin.svg'
 import Whatsapp from '../../icons/whatsapp.svg'
@@ -59,7 +59,7 @@ export function GeitInTouchContent({ open }) {
             <ImageRenderer className={"animate-appear-1"} src={Gmail} name={"Saibarathr@gmail.com"} link={'mailto:saibarathr@gmail.com'} />
             <ImageRenderer className={"animate-appear-2"} src={Github} name={"@SaiBarathR"} link={'https://github.com/SaiBarathR'} />
             <ImageRenderer className={"animate-appear-4"} src={Whatsapp} name={"Sai Barath R"} link={' https://wa.me/919843621231 '} />
-            <ImageRenderer className={"animate-appear-6"} src={Twitter} name={"@Saibarathr"} link={'https://twitter.com/saibarathr'} />
+            <ImageRenderer className={"animate-appear-6"} src={X} name={"@Saibarathr"} link={'https://twitter.com/saibarathr'} />
         </div>
     </div>
 }

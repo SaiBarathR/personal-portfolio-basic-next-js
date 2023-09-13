@@ -1,7 +1,7 @@
 'use client'
 
 import { space_grotesk } from "@/icons/font";
-import Twitter from '../../icons/twitter.svg'
+import X from '../../icons/x.svg'
 import Instagram from '../../icons/instagram.svg'
 import Twitch from '../../icons/twitch.svg'
 import Github from '../../icons/github.svg'
@@ -12,7 +12,7 @@ export default function Footer() {
 
     const imageList = useMemo(() => [
         { src: Github, alt: 'github', url: "https://github.com/SaiBarathR" },
-        { src: Twitter, alt: 'twitter', url: "https://twitter.com/saibarathr" },
+        { src: X, alt: 'twitter', url: "https://twitter.com/saibarathr" },
         { src: Instagram, alt: 'Instagram', url: "https://www.instagram.com/saibarath_r/" },
         { src: Twitch, alt: 'twitch', url: "https://www.twitch.tv/meteoldrag0" },
     ], [])
