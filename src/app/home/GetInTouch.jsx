@@ -34,11 +34,12 @@ export function GeitInTouchContent({ open }) {
 
     function onClickContact(link, name) {
         copyTextToClipboard(name)
-        link.includes('mail') ? window.open(link) : window.open(link, '_blank', 'noreferrer')
+        // link.includes('mail') ? window.open(link) : window.open(link, '_blank', 'noreferrer')
+        !link.includes('mail') && window.open(link, '_blank', 'noreferrer')
     }
 
     function ImageRenderer({ src, link, name, className }) {
-        return <div className={"flex hover:bg-cyan-200  md:m-0 m-2 flex-col md:flex-row gap-5  items-center cursor-pointer hover:scale-105 transition ease-in-out delay-75 hover:-translate-y-1 shadow-md p-2 rounded-lg " + className}
+        return <div className={`flex hover:bg-cyan-200  md:m-0 m-2 flex-col md:flex-row gap-5  items-center ${!link.includes('mail') && 'hover:scale-105 transition ease-in-out delay-75 hover:-translate-y-1 cursor-pointer'} shadow-md p-2 rounded-lg ` + className}
             onClick={() => onClickContact(link, name)}
         >
             <Image src={src} alt={name} />
