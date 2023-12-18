@@ -26,7 +26,8 @@ export default function AboutMe() {
     }
 
     useEffect(() => {
-        getRepositories("folder-file-management");
+        getRepositories("manga-harbor-server");
+        getRepositories("manga-harbor");
         getRepositories("Custom-Table");
     }, [])
 
@@ -35,7 +36,7 @@ export default function AboutMe() {
             {repositoryDetails.length > 0 && <>
                 <GeitInTouchContent open={true} />
                 <div className="w-full">
-                    <ProjectList defaultOpen={true} enableDropDown={false} currentTheme={'dark'} open={repositoryDetails.length > 0} className={" animate-appear"} repositoryDetails={repositoryDetails} header="Highlighted Projects" />
+                    <ProjectList  defaultOpen={true} enableDropDown={false} currentTheme={'dark'} open={repositoryDetails.length > 0} className={" animate-appear overflow-auto max-h-[700px]"} repositoryDetails={repositoryDetails} header="Highlighted Projects" />
                 </div>
             </>
             }
